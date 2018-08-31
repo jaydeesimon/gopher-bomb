@@ -4,9 +4,9 @@ import "fmt"
 
 type Cell struct {
 	adjacentBombCount int
-	bomb bool
-	covered bool
-	flagged bool
+	bomb              bool
+	covered           bool
+	flagged           bool
 }
 
 func InitializeBoard(rows int, cols int) [][]Cell {
@@ -29,7 +29,7 @@ func PrintHorizontalLine(size int) {
 
 func PrintRow(rowNum int, row []Cell) {
 	size := len(row)
-	lineSize := len(row) * 2 + len(row) + 1
+	lineSize := len(row)*2 + len(row) + 1
 
 	if rowNum == 0 {
 		PrintHorizontalLine(lineSize)
@@ -59,7 +59,6 @@ func PrintBoard(board [][]Cell) {
 		PrintRow(i, board[i])
 	}
 }
-
 
 func main() {
 	board := InitializeBoard(16, 16)
